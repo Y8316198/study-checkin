@@ -16,10 +16,10 @@ window.Storage = (function () {
 
   // 默认科目(贴合机械设计工程方向用户背景)
   var DEFAULT_SUBJECTS = [
-    { id: 'subj_solidworks', name: 'SolidWorks练习', color: '#4CAF50', icon: '📐', order: 1 },
-    { id: 'subj_ansys',      name: 'ANSYS学习',      color: '#2196F3', icon: '🔬', order: 2 },
-    { id: 'subj_interview',  name: '面试准备',        color: '#FF9800', icon: '💼', order: 3 },
-    { id: 'subj_english',    name: '英语',            color: '#9C27B0', icon: '📖', order: 4 }
+    { id: 'subj_paper',   name: '论文', color: '#FF9800', icon: '📝', order: 1 },
+    { id: 'subj_english', name: '英语', color: '#9C27B0', icon: '📖', order: 2 },
+    { id: 'subj_contact', name: '陶瓷', color: '#4CAF50', icon: '✉️', order: 3 },
+    { id: 'subj_rp',      name: 'RP',   color: '#2196F3', icon: '📋', order: 4 }
   ];
 
   var DEFAULT_SETTINGS = {
