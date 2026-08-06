@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#4CAF50">
+  <title>尚美岐不爱学习</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 持久化降级提示条(file:// 下 localStorage 不可用时显示) -->
+  <div id="persistence-banner" class="persistence-banner" style="display:none"></div>
+
+  <div class="app-shell">
+    <!-- 顶部导航(桌面端顶部,移动端底部) -->
+    <nav class="app-nav">
+      <a class="nav-item" data-nav="today" data-action="navigate">
+        <span class="nav-icon">📝</span>
+        <span class="nav-label">今日</span>
+      </a>
+      <a class="nav-item" data-nav="calendar" data-action="navigate">
+        <span class="nav-icon">📅</span>
+        <span class="nav-label">日历</span>
+      </a>
+      <a class="nav-item" data-nav="stats" data-action="navigate">
+        <span class="nav-icon">📊</span>
+        <span class="nav-label">统计</span>
+      </a>
+      <a class="nav-item" data-nav="settings" data-action="navigate">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-label">设置</span>
+      </a>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+      <section id="view-today" class="view active"></section>
+      <section id="view-calendar" class="view"></section>
+      <section id="view-stats" class="view"></section>
+      <section id="view-settings" class="view"></section>
+    </main>
+  </div>
+
+  <!-- 模态框根容器(由 ui.js 动态填充) -->
+  <div id="modal-root"></div>
+
+  <!-- 脚本按顺序加载:storage → ui → app(app 依赖前两者,放 body 末尾保证 DOM 就绪) -->
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
